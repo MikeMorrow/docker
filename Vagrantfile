@@ -15,7 +15,7 @@ Vagrant.configure(2) do |config|
   # Hypervisor
   # ---------------------------------------------------------------------------
   config.vm.define :server do |server|
-    server.vm.network :private_network, ip: "192.168.3.2"
+    server.vm.network :private_network, ip: "192.168.3.30"
     server.vm.hostname = 'Server'
     server.vm.provision "shell", path: "scripts/setupEnvironment.sh"
     server.vm.provision "shell", path: "scripts/installServer.sh"
